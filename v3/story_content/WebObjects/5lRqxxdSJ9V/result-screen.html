@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rive Animation</title>
+  <script src="https://unpkg.com/@rive-app/canvas@2.7.0"></script>
+</head>
+
+<body>
+  <canvas id="canvas" width="800" height="800"
+    style="width: 100%; position:absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;"></canvas>
+  <script>
+      var is_rive_loaded = false;
+  
+      const r = new rive.Rive({
+        src: 'result-screen.riv',
+        canvas: document.getElementById('canvas'),
+        autoplay: true,
+        stateMachines: 'State Machine 1',
+        fit: rive.Fit.Cover,
+        onLoad: () => {
+          // Log the contents of the Rive file
+          is_rive_loaded = true;
+        }
+      });
+  
+      function change_state(state) {
+        const inputs = r.stateMachineInputs('State Machine 1');
+        // console.log(typeof inputs);
+        // console.log(inputs);
+        for (var index = 0; index < inputs.length; index++) {
+          var i = inputs[index];
+          const inputName = i.name;
+          const inputType = i.type;
+          switch (inputType) {
+            case rive.StateMachineInputType.Number:
+              i.value = state;
+              break;
+          }
+        }
+      }
+  
+      function fireup() {
+        const inputs = r.stateMachineInputs('State Machine 1');
+        // console.log(typeof inputs);
+        // console.log(inputs);
+        for (var index = 0; index < inputs.length; index++) {
+          var i = inputs[index];
+          const inputName = i.name;
+          const inputType = i.type;
+          switch (inputType) {
+            case rive.StateMachineInputType.Trigger:
+              i.fire();
+              break;
+          }
+        }
+      }
+  
+    </script>
+
+  <!-- <button id="btn_click">Click me</button> -->
+
+  <!-- <script src='riv.js'></script> -->
+</body>
+
+</html>
