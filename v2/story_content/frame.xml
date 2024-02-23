@@ -6,6 +6,7 @@
     <layout name="npxnabnsnfns00001100101" font="Lato" controllayout="npxnabnsnfns00001100101" colorscheme="pxabnsnfns00001100101" string_table="pxabnsnfns00001100101" />
     <layout name="npnxnanbnsnfns00001100101" font="Lato" controllayout="npnxnanbnsnfns00001100101" colorscheme="pxabnsnfns00001100101" string_table="pxabnsnfns00001100101" />
     <layout name="pxabnsnfns00001100100" font="Lato" controllayout="pxabnsnfns00001100100" colorscheme="pxabnsnfns00001100101" string_table="pxabnsnfns00001100101" />
+    <layout name="npnxabnsnfns00001100101" font="Lato" controllayout="npnxabnsnfns00001100101" colorscheme="pxabnsnfns00001100101" string_table="pxabnsnfns00001100101" />
   </layouts>
   <control_options>
     <optiongroups>
@@ -13,7 +14,7 @@
         <options>
           <option name="title_enabled" value="true">
             <options>
-              <option name="title_text" value="Speechace test_New" />
+              <option name="title_text" value="Speechace test_PromptMic" />
             </options>
           </option>
           <option name="logo_enabled" value="false">
@@ -217,6 +218,31 @@
         </controls>
       </control>
       <control name="close_btn" enabled="false" />
+    </control_layout>
+    <control_layout name="npnxabnsnfns00001100101">
+      <control name="volume" enabled="true" />
+      <control name="seekbar" enabled="false" />
+      <control name="replay" enabled="false" />
+      <control name="pauseplay" enabled="false" />
+      <control name="logo" enabled="false" />
+      <control name="previous" enabled="false" />
+      <control name="next" enabled="false" />
+      <control name="swipeleft" enabled="true" />
+      <control name="swiperight" enabled="true" />
+      <control name="fullScreenToggle" enabled="false" />
+      <control name="playbackSpeedControl" enabled="false" />
+      <control name="submit" enabled="false" />
+      <control name="finish" enabled="false" />
+      <control name="submitall" enabled="false" />
+      <control name="resources" enabled="true" />
+      <control name="glossary" enabled="false" />
+      <control name="transcript" enabled="false" />
+      <control name="outline" enabled="true">
+        <controls>
+          <control name="search" enabled="false" />
+        </controls>
+      </control>
+      <control name="close_btn" enabled="true" />
     </control_layout>
   </control_layouts>
   <colorschemes>
@@ -1574,7 +1600,9 @@
       <links>
         <slidelink slideid="_player.6q5uqddkjt4" displaytext="Untitled Scene" expand="true" type="slide">
           <links>
+            <slidelink slideid="_player.6q5uqddkjt4.5lf4MmQ2VRI" displaytext="Instruction slide" expand="false" type="slide" />
             <slidelink slideid="_player.6q5uqddkjt4.6m5exCtk5RP" displaytext="Question" expand="false" type="slide" />
+            <slidelink slideid="_player.6q5uqddkjt4.699ZJZsiV0I" displaytext="Feedback" expand="false" type="slide" />
           </links>
         </slidelink>
       </links>
